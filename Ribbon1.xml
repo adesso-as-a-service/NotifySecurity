@@ -5,7 +5,7 @@
       <tab idMso="TabMail" visible="true">
           <group  id="grousp1"  getLabel="GetGroupLabel" visible="true">
             <button id="button1D"
-             size="large" 
+                        size="large" 
                         getLabel="GetButtonLabel"
                         getSupertip="GetSupertipLabel"
                         getImage="GetImage"
