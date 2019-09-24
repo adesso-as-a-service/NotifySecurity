@@ -25,7 +25,7 @@
     <OutputType>Library</OutputType>
     <NoStandardLibraries>false</NoStandardLibraries>
     <RootNamespace>NotifySecurity</RootNamespace>
-    <AssemblyName>Adesso-as-a-Service NotifySecurity</AssemblyName>
+    <AssemblyName>Smarthouse NotifySecurity</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <DefineConstants>VSTO40</DefineConstants>
     <IsWebBootstrapper>False</IsWebBootstrapper>
@@ -44,10 +44,10 @@
     <UpdateEnabled>false</UpdateEnabled>
     <UpdateInterval>0</UpdateInterval>
     <UpdateIntervalUnits>days</UpdateIntervalUnits>
-    <ProductName>Adesso-as-a-Service NotifySecurity</ProductName>
+    <ProductName>Smarthouse NotifySecurity</ProductName>
     <PublisherName>Adesso AG</PublisherName>
-    <SupportUrl>https://github.com/adesso-as-a-service/NotifySecurity</SupportUrl>
-    <FriendlyName>Adesso-as-a-Service NotifySecurity</FriendlyName>
+    <SupportUrl>https://github.com/adesso-as-a-service/NotifySecurity/tree/Smarthouse</SupportUrl>
+    <FriendlyName>Smarthouse NotifySecurity</FriendlyName>
     <OfficeApplicationDescription>Outlook addin for contacting the Security team %28in case of any alert, request, phishing...%29</OfficeApplicationDescription>
     <LoadBehavior>16</LoadBehavior>
   </PropertyGroup>
@@ -205,7 +205,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Shieldy_TemporaryKey.pfx" />
     <None Include="ThisAddIn.Designer.xml">
       <DependentUpon>ThisAddIn.cs</DependentUpon>
     </None>

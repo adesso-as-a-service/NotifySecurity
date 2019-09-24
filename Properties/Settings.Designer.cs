@@ -82,15 +82,15 @@ namespace NotifySecurity.Properties {
 
 
 
-        //[global::System.Configuration.ApplicationScopedSettingAttribute()]
-        //[global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        //[global::System.Configuration.DefaultSettingValueAttribute("security@smarthouse.de")]
-        //public string Security_Team_Mail1
-        //{
-        //    get
-        //    {
-        //        return ((string)(this["Security_Team_Mail1"]));
-        //    }
-        //}
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("security@smarthouse.de")]
+        public string Security_Team_Mail1
+        {
+            get
+            {
+                return ((string)(this["Security_Team_Mail1"]));
+            }
+        }
     }
 }

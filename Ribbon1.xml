@@ -3,9 +3,9 @@
     <ribbon startFromScratch="false">
     <tabs>
       <tab idMso="TabMail" visible="true">
-          <group  id="grousp1"  getLabel="GetGroupLabel" visible="true">
-            <button id="button1D"
-                        size="large" 
+          <group  id="SH"  getLabel="GetGroupLabel" visible="true">
+            <button id="button1D1"
+                        size="large"
                         getLabel="GetButtonLabel"
                         getSupertip="GetSupertipLabel"
                         getImage="GetImage"
@@ -17,11 +17,11 @@
   
   <contextMenus>
     <contextMenu idMso="ContextMenuMailItem">
-      <button id="SynchronizeMailItem" 
-              onAction="ShowMessageClick" 
-              showImage="true"              
+      <button id="SynchronizeMailItem1"
+              onAction="ShowMessageClick"
+              showImage="true"
               getImage="GetImage"
-              getLabel="GetContextMenuLabel"/>
+              getLabel="GetContextMenuLabel1"/>
     </contextMenu>
   </contextMenus>
 </customUI>

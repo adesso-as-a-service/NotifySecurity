@@ -21,7 +21,7 @@ namespace NotifySecurity
     [ComVisible(true)]
     public class Ribbon1 : IRibbonExtensibility
     {
-        private Office.IRibbonUI ribbon;
+        private IRibbonUI ribbon;
         public Ribbon1()
         {
             StartUp = true;
@@ -29,7 +29,6 @@ namespace NotifySecurity
 
         public Boolean StartUp = false;
         public String ddlEntityValue = "Company";
-
         private static string GetResourceText(string resourceName)
         {
             Assembly asm = Assembly.GetExecutingAssembly();
@@ -62,16 +61,17 @@ namespace NotifySecurity
 
         public string GetContextMenuLabel(IRibbonControl control)
         {
-            return "Adesso-Service Security";
+            return "Smarthouse Security";
         }
 
         public string GetGroupLabel(IRibbonControl control)
         {
             return "";
         }
+
         public string GetTabLabel(IRibbonControl control)
         {
-            return "Adesso-Service Security";
+            return "Smarthouse Security";
         }
 
         public string GetSupertipLabel(IRibbonControl control)
@@ -87,22 +87,23 @@ namespace NotifySecurity
 
         public string GetScreentipLabel(IRibbonControl control)
         {
-            return "Adesso-Service Security";
+            return "Smarthouse Security";
         }
 
         public string GetButtonLabel(IRibbonControl control)
         {
-            return "Adesso-Service Security";
+            return "Smarthouse Security";
         }
 
         public void ShowMessageClick(IRibbonControl control)
         {
+
             CreateNewMailToSecurityTeam(control);
         }
 
         public Bitmap GetImage(IRibbonControl control)
         {
-            return new Bitmap(Resources._3as);
+            return new Bitmap(Resources.sh);
         }
 
         private void CreateNewMailToSecurityTeam(IRibbonControl control)
@@ -121,7 +122,7 @@ namespace NotifySecurity
                 tosend.Attachments.Add(mailItemObj);
                 try
                 {
-                    tosend.To = Settings.Default.Security_Team_Mail;
+                    tosend.To = Settings.Default.Security_Team_Mail1;
                     tosend.Subject = "[User Alert] Suspicious mail received. Please investigate";
                     tosend.CC = Settings.Default.Security_Team_Mail_cc;
                     tosend.BCC = Settings.Default.Security_Team_Mail_bcc;
@@ -132,9 +133,13 @@ namespace NotifySecurity
                         string[] preparedByArray = mailItem.Headers("X-PreparedBy");
                         string preparedBy;
                         if (preparedByArray.Length == 1)
+                        {
                             preparedBy = preparedByArray[0];
+                        }
                         else
+                        {
                             preparedBy = "";
+                        }
                         allHeaders = mailItem.HeaderString();
                     }
                     else
@@ -144,7 +149,7 @@ namespace NotifySecurity
                         if (typeFound == "unknown")
                         {
                             typeFound = (selection[1] is MeetingItem) ? "MeetingItem" : typeFound;
-                        }
+                        }   
                         if (typeFound == "unknown")
                         {
                             typeFound = (selection[1] is ContactItem) ? "ContactItem" : typeFound;
@@ -191,7 +196,6 @@ namespace NotifySecurity
                 catch (System.Exception ex)
                 {
                     MessageBox.Show("Using default template" + ex.Message);
-
                     MailItem mi = (MailItem)Globals.ThisAddIn.Application.CreateItem(OlItemType.olMailItem);
                     mi.To = Settings.Default.Security_Team_Mail;
                     mi.Subject = "Security addin error";
@@ -223,9 +227,7 @@ namespace NotifySecurity
             AddressEntry addrEntry = Globals.ThisAddIn.Application.Session.CurrentUser.AddressEntry;
             if (addrEntry.Type == "EX")
             {
-                ExchangeUser currentUser =
-                    Globals.ThisAddIn.Application.Session.CurrentUser.
-                    AddressEntry.GetExchangeUser();
+                ExchangeUser currentUser = Globals.ThisAddIn.Application.Session.CurrentUser.AddressEntry.GetExchangeUser();
                 if (currentUser != null)
                 {
                     usefullInfo.AppendLine();
@@ -252,8 +254,7 @@ namespace NotifySecurity
         private const string HeaderRegex =
             @"^(?<header_key>[-A-Za-z0-9]+)(?<seperator>:[ \t]*)" +
                 "(?<header_value>([^\r\n]|\r\n[ \t]+)*)(?<terminator>\r\n)";
-        private const string TransportMessageHeadersSchema =
-            "http://schemas.microsoft.com/mapi/proptag/0x007D001E";
+        private const string TransportMessageHeadersSchema = "http://schemas.microsoft.com/mapi/proptag/0x007D001E";
 
         public static string[] Headers(this MailItem mailItem, string name)
         {
