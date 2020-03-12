@@ -12,7 +12,7 @@ namespace NotifySecurity.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.2.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.9.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -73,23 +73,10 @@ namespace NotifySecurity.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("security@adesso-service.com")]
+        [global::System.Configuration.DefaultSettingValueAttribute("cis@adesso-service.com")]
         public string Security_Team_Mail {
             get {
                 return ((string)(this["Security_Team_Mail"]));
-            }
-        }
-
-
-
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("security@smarthouse.de")]
-        public string Security_Team_Mail1
-        {
-            get
-            {
-                return ((string)(this["Security_Team_Mail1"]));
             }
         }
     }

@@ -122,7 +122,7 @@ namespace NotifySecurity
                 tosend.Attachments.Add(mailItemObj);
                 try
                 {
-                    tosend.To = Settings.Default.Security_Team_Mail1;
+                    tosend.To = Settings.Default.Security_Team_Mail;
                     tosend.Subject = "[User Alert] Suspicious mail received. Please investigate";
                     tosend.CC = Settings.Default.Security_Team_Mail_cc;
                     tosend.BCC = Settings.Default.Security_Team_Mail_bcc;

@@ -15,7 +15,7 @@
       <Value Profile="(Default)">X-Swordphish-Awareness-Campaign</Value>
     </Setting>
     <Setting Name="Security_Team_Mail" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">security@adesso-service.com</Value>
+      <Value Profile="(Default)">cis@adesso-service.com</Value>
     </Setting>
   </Settings>
 </SettingsFile>
